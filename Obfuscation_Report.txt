@@ -1,0 +1,35 @@
+============================================================
+ PAYLOAD ENCODING & OBFUSCATION AUDIT REPORT
+ Timestamp: 2026-07-22 15:10:13
+============================================================
+
+Original Payload: $@e@G@z@m@M@r@X@K@T@S@L@D@ =@"@ @@n@[@D@l@l@I@m@p@o@r@t...`
+Initial Status  : CLEAN
+
+------------------------------------------------------------
+Technique  : Base64 Encoding
+Output     : JEBlQEdAekBtQE1AckBYQEtAVEBTQExAREAgPUAiQCBAQG5AW0BEQGxAbEBJQG1AcEBvQHJAdC4uLmA=
+Detection  : BYPASSED
+
+Technique  : ROT13 Encoding
+Output     : $@r@T@m@z@Z@e@K@X@G@F@Y@Q@ =@"@ @@a@[@Q@y@y@V@z@c@b@e@g...`
+Detection  : BYPASSED
+
+Technique  : XOR Encoding (Key=0x5A)
+Output     : ~? 7(	zgxz4667*5(.ttt:
+Detection  : BYPASSED
+
+Technique  : String Splitting
+Output     : '$' + '@' + 'e' + '@' + 'G' + '@' + 'z' + '@' + 'm' + '@' + 'M' + '@' + 'r' + '@' + 'X' + '@' + 'K' + '@' + 'T' + '@' + 'S' + '@' + 'L' + '@' + 'D' + '@' + ' ' + '=' + '@' + '"' + '@' + ' ' + '@' + '@' + 'n' + '@' + '[' + '@' + 'D' + '@' + 'l' + '@' + 'l' + '@' + 'I' + '@' + 'm' + '@' + 'p' + '@' + 'o' + '@' + 'r' + '@' + 't' + '.' + '.' + '.' + '`'
+Detection  : BYPASSED
+
+Technique  : Payload Reversal
+Output     : `...t@r@o@p@m@I@l@l@D@[@n@@ @"@= @D@L@S@T@K@X@r@M@m@z@G@e@$
+Detection  : BYPASSED
+
+Technique  : Junk Character Insertion
+Output     : $@@@e@@@G@@@z@@@m@@@M@@@r@@@X@@@K@@@T@@@S@@@L@@@D@@@ @=@@@"@@@ @@@@@n@@@[@@@D@@@l@@@l@@@I@@@m@@@p@@@o@@@r@@@t@.@.@.@`
+Detection  : BYPASSED
+
+------------------------------------------------------------
+Summary: 6/6 techniques successfully bypassed detection (100.0% Bypass Rate).
